@@ -9,10 +9,11 @@ export default function About() {
       <div
         className="
           max-w-6xl mx-auto px-6
-          flex flex-col lg:flex-row items-start
-          justify-between gap-16
+          flex flex-col-reverse lg:flex-row
+          items-start justify-between gap-16
         "
       >
+        {/* LEFT IMAGE (desktop) — BOTTOM on mobile */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -28,6 +29,7 @@ export default function About() {
           </div>
         </motion.div>
 
+        {/* RIGHT CONTENT (desktop) — TOP on mobile */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -44,18 +46,7 @@ export default function About() {
           </h3>
 
           <p className="text-[#b4b4b4] leading-8 text-[15px] max-w-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
-            porro veritatis pariatur, nobis voluptatem ipsum repellat nemo
-            quisquam error reprehenderit recusandae odio vel, suscipit. Voluptas
-            mollitia accusantium quaerat aspernatur labore dolorum placeat ipsa
-            sint nam perspiciatis eos consectetur veritatis debitis, quis
-            aliquam unde sed maiores sit! Hic molestiae optio iste iure earum
-            amet nostrum quaerat facere quae veniam maiores harum iusto aperiam
-            vel inventore illo voluptatibus voluptates quo impedit voluptatem
-            error vitae, omnis praesentium? Aperiam nulla non, nesciunt fuga rem
-            perferendis alias et, temporibus, distinctio culpa unde a laborum
-            libero ducimus. Facilis veniam sit praesentium, voluptatibus sint
-            maxime iusto eaque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aut labore saepe neque ratione explicabo quod eaque commodi quidem odit, alias sequi praesentium nemo iusto culpa voluptate quam. Minus eveniet perferendis itaque obcaecati modi tenetur fuga ullam similique? Culpa atque aut doloremque dignissimos laborum debitis vitae! Ipsam pariatur modi, sit cupiditate facere necessitatibus eius enim architecto culpa veritatis libero labore ea distinctio nihil quia quos quasi vitae dolore accusantium qui, obcaecati sint cum? A ad debitis, facilis voluptatibus fugiat soluta blanditiis
           </p>
 
           <NavLink to="*">
@@ -63,9 +54,9 @@ export default function About() {
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               className="
-              bg-[#ff5a1f] text-white px-8 py-3
-              rounded-md font-medium flex items-center gap-2 w-fit
-            "
+                bg-[#ff5a1f] text-white px-8 py-3
+                rounded-md font-medium flex items-center gap-2 w-fit
+              "
             >
               Download CV <ArrowRight size={18} />
             </motion.button>
